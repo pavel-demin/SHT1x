@@ -31,7 +31,7 @@ class SHT1x
 {
   public:
     SHT1x(int dataPin, int clockPin);
-    SHT1x(int dataPin, int clockPin, float voltage, bool intPullup=false);
+    SHT1x(int dataPin, int clockPin, float voltage, bool intPullup);
     void reset();
     //composite functions
     float readHumidity();
