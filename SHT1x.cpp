@@ -30,7 +30,7 @@ SHT1x::SHT1x(int dataPin, int clockPin)
   _status = 0;
 }
 
-SHT1x::SHT1x(int dataPin, int clockPin, float voltage, bool intPullup=false)
+SHT1x::SHT1x(int dataPin, int clockPin, float voltage, bool intPullup)
 {
   _dataPin = dataPin;
   _clockPin = clockPin;
