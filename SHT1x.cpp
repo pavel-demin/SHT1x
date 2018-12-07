@@ -172,10 +172,10 @@ float SHT1x::parseHumidity(int raw){
   float correctedHumidity;    // Temperature-corrected humidity
   float temperature;          // Raw temperature value
 
-  // Conversion coefficients from SHT15 datasheet
-  const float C1 = -4.0;       // for 12 Bit
-  const float C2 =  0.0405;    // for 12 Bit
-  const float C3 = -0.0000028; // for 12 Bit
+  // Conversion coefficients from SHT1x datasheet
+  const float C1 = -2.0468;    // for 12 Bit
+  const float C2 =  0.0367;    // for 12 Bit
+  const float C3 = -1.5955e-6; // for 12 Bit
   const float T1 =  0.01;      // for 14 Bit
   const float T2 =  0.00008;   // for 14 Bit
 
