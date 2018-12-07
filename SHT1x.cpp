@@ -172,7 +172,7 @@ float SHT1x::parseHumidity(int raw){
   float correctedHumidity;    // Temperature-corrected humidity
   float temperature;          // Raw temperature value
 
-  // Conversion coefficients from SHT1x datasheet
+  // Conversion coefficients from SHT7x datasheet
   const float C1 = -2.0468;    // for 12 Bit
   const float C2 =  0.0367;    // for 12 Bit
   const float C3 = -1.5955e-6; // for 12 Bit
@@ -248,7 +248,7 @@ void SHT1x::waitForResultSHT()
   unsigned long int start = millis();
   
   // Wait for SHT to show that it's ready or move along if timeout is reached
-  while( digitalRead(_dataPin) && (millis()-start)<TIMEOUT_MILLIS );
+  while (digitalRead(_dataPin) && (millis() - start) < TIMEOUT_MILLIS) yield();
 }
 
 /**
